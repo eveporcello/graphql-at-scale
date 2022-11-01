@@ -1,10 +1,13 @@
-const { ApolloServer, gql } = require("apollo-server");
+const { ApolloServer } = require("@apollo/server");
 const { buildSubgraphSchema } = require("@apollo/subgraph");
 const lifts = require("./lift-data.json");
 const fs = require("fs");
 
-const gqlFile = fs.readFileSync("./lifts-schema.graphql", "UTF-8")
-const typeDefs = gql(gqlFile)
+const gqlFile = fs.readFileSync(
+  "./lifts-schema.graphql",
+  "UTF-8"
+);
+const typeDefs = gql(gqlFile);
 
 const resolvers = {
   Query: {

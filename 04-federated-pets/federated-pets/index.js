@@ -3,12 +3,9 @@ const { readFileSync } = require("fs");
 const { buildSubgraphSchema } = require("@apollo/subgraph");
 const { data } = require("./sample-pets.json");
 
-const typeDefs = gql(readFileSync("./typeDefs.graphql", "UTF-8"));
-
-// pet: Pet
-// checkOutDate: Date!
-// checkInDate: Date!
-// late: Boolean
+const typeDefs = gql(
+  readFileSync("./typeDefs.graphql", "UTF-8")
+);
 
 const server = new ApolloServer({
   schema: buildSubgraphSchema({
