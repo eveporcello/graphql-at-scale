@@ -14,6 +14,7 @@
 
 - [Slides](https://slides.com/moonhighway/unions-interfaces/)
 - [Funded Pet Library](https://funded-pet-library.moonhighway.com)
+- [Pagination](https://relay.dev/graphql/connections.htm)
 
 ## Apollo Client
 
