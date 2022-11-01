@@ -1,5 +1,9 @@
 const { ApolloServer } = require("@apollo/server");
+const {
+  startStandaloneServer,
+} = require("@apollo/server/standalone");
 const { buildSubgraphSchema } = require("@apollo/subgraph");
+const { gql } = require("graphql-tag");
 const lifts = require("./lift-data.json");
 const fs = require("fs");
 
@@ -49,15 +53,14 @@ const resolvers = {
   },
 };
 
-const server = new ApolloServer({
-  schema: buildSubgraphSchema({
-    typeDefs,
-    resolvers,
-  }),
-});
+async function startApolloServer() {
+  const server = new ApolloServer({
+    schema: buildSubgraphSchema({ typeDefs, resolvers }),
+  });
 
-server.listen(process.env.PORT).then(({ url }) => {
-  console.log(
-    `🚠 Snowtooth Lift Service running at ${url}`
-  );
-});
+  const { url } = await startStandaloneServer(server, {
+    listen: { port: 4000 },
+  });
+  console.log(`Server running at ${url}`);
+}
+startApolloServer();

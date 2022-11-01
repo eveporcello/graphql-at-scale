@@ -1,10 +1,17 @@
-const { ApolloServer, gql } = require("apollo-server");
+const { ApolloServer } = require("apollo-server");
+const {
+  startStandaloneServer,
+} = require("@apollo/server/standalone");
 const { buildSubgraphSchema } = require("@apollo/subgraph");
 const trails = require("./trail-data.json");
 const findEasiestTrail = require("./findEasiestTrail");
 const fs = require("fs");
+const { gql } = require("graphql-tag");
 
-const gqlFile = fs.readFileSync("./trails-schema.graphql", "UTF-8");
+const gqlFile = fs.readFileSync(
+  "./trails-schema.graphql",
+  "UTF-8"
+);
 const typeDefs = gql(gqlFile);
 
 const resolvers = {
@@ -44,15 +51,14 @@ const resolvers = {
   },
 };
 
-const server = new ApolloServer({
-  schema: buildSubgraphSchema({
-    typeDefs,
-    resolvers,
-  }),
-});
+async function startApolloServer() {
+  const server = new ApolloServer({
+    schema: buildSubgraphSchema({ typeDefs, resolvers }),
+  });
 
-server.listen(process.env.PORT).then(({ url }) => {
-  console.log(
-    `🏔 Snowtooth - trail Service running at ${url}`
-  );
-});
+  const { url } = await startStandaloneServer(server, {
+    listen: { port: 4000 },
+  });
+  console.log(`Server running at ${url}`);
+}
+startApolloServer();
