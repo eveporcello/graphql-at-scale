@@ -3,7 +3,7 @@
 <img src="https://i.imgur.com/migo24P.png" width="100" alt="moon highway logo"/>
 </p>
 
-# Production-Ready GraphQL
+# GraphQL at Scale
 
 ## Instructor Info
 
@@ -12,20 +12,23 @@
 
 ## Apollo Client
 
+- [Apollo Client Docs](https://www.apollographql.com/docs/react/)
+
 ## Rover & Apollo Studio
 
 - [Slides](https://slides.com/moonhighway/apollo-tooling/)
-- [Snowtooth Monolith Project](https://github.com/MoonHighway/production-ready-graphql/tree/main/02-snowtooth-monolith)
-- [Lab: San Diego API](https://github.com/MoonHighway/production-ready-graphql/tree/main/03-san-diego-api-monolith)
-- [Lab Instructions](https://github.com/MoonHighway/production-ready-graphql/blob/main/03-san-diego-api-monolith/LAB_INSTRUCTIONS.md)
+- [Snowtooth Monolith Project](https://github.com/eveporcello/graphql-at-scale/tree/main/02-snowtooth-monolith)
 - [Cheatsheet](https://github.com/MoonHighway/production-ready-graphql/blob/main/resources/Monolith/RoverCheatsheet-Monolith.md)
+
+## Apollo Federation
+
+- [Slides](https://slides.com/moonhighway/federation/#/6)
+- [Federation Docs](https://www.apollographql.com/docs/federation/quickstart/setup/)
 
 ## Managed Federation
 
 - [Snowtooth Supergraph Project](https://github.com/MoonHighway/production-ready-graphql/tree/main/04-snowtooth-supergraph)
-- [Lab: San Diego Federated API](https://github.com/MoonHighway/production-ready-graphql/tree/main/05-san-diego-federated-api)
-- [Lab Instructions]()
-- [Cheatsheet]()
+- [Lab: Federated Pets](https://github.com/MoonHighway/production-ready-graphql/tree/main/05-san-diego-federated-api)
 
 ## Security
 
@@ -39,3 +42,14 @@
 
 - [Error Handling by Sasha Solomon](https://sachee.medium.com/200-ok-error-handling-in-graphql-7ec869aec9bc)
 - [Subgraph Errors](https://www.apollographql.com/docs/router/configuration/subgraph-error-inclusion)
+
+## Student Evaluations
+
+Please share your thoughts about this workshop in this anonymous (and quick!) evaluation.
+
+- [Evaluations](https://forms.gle/SvtyKhmxecVe2fRF8)
+
+## Next Steps
+
+- [Apollo Tutorial](https://www.apollographql.com/tutorials/)
+- [Apollo Certification](https://www.apollographql.com/tutorials/exams/apollo-graph-associate)

@@ -1,10 +1,8 @@
-const { ApolloServer } = require("apollo-server");
+const { ApolloServer } = require("@apollo/server");
 const {
   startStandaloneServer,
 } = require("@apollo/server/standalone");
-const { buildSubgraphSchema } = require("@apollo/subgraph");
 const trails = require("./trail-data.json");
-const findEasiestTrail = require("./findEasiestTrail");
 const fs = require("fs");
 const { gql } = require("graphql-tag");
 
@@ -37,27 +35,13 @@ const resolvers = {
       return updatedTrail;
     },
   },
-  Trail: {
-    __resolveReference: (reference) =>
-      trails.find((trail) => trail.id === reference.id),
-  },
-  Lift: {
-    easyWayDown: (lift) => {
-      const waysDown = trails.filter((trail) =>
-        trail.lift.includes(lift.id)
-      );
-      return findEasiestTrail(waysDown);
-    },
-  },
 };
 
 async function startApolloServer() {
-  const server = new ApolloServer({
-    schema: buildSubgraphSchema({ typeDefs, resolvers }),
-  });
+  const server = new ApolloServer({ typeDefs, resolvers });
 
   const { url } = await startStandaloneServer(server, {
-    listen: { port: 4000 },
+    listen: { port: 5001 },
   });
   console.log(`Server running at ${url}`);
 }

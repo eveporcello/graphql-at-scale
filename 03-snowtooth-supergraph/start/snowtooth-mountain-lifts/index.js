@@ -2,7 +2,6 @@ const { ApolloServer } = require("@apollo/server");
 const {
   startStandaloneServer,
 } = require("@apollo/server/standalone");
-const { buildSubgraphSchema } = require("@apollo/subgraph");
 const { gql } = require("graphql-tag");
 const lifts = require("./lift-data.json");
 const fs = require("fs");
@@ -36,30 +35,13 @@ const resolvers = {
       return updatedLift;
     },
   },
-  Trail: {
-    liftAccess: (trail) =>
-      lifts.filter((lift) =>
-        lift.trails.includes(trail.id)
-      ),
-  },
-  Lift: {
-    trailAccess: (lift) =>
-      lift.trails.map((id) => ({
-        __typename: "Trail",
-        id,
-      })),
-    __resolveReference: ({ id }) =>
-      lifts.find((lift) => lift.id === id),
-  },
 };
 
 async function startApolloServer() {
-  const server = new ApolloServer({
-    schema: buildSubgraphSchema({ typeDefs, resolvers }),
-  });
+  const server = new ApolloServer({ typeDefs, resolvers });
 
   const { url } = await startStandaloneServer(server, {
-    listen: { port: 4000 },
+    listen: { port: 5000 },
   });
   console.log(`Server running at ${url}`);
 }
