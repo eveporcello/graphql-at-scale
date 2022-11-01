@@ -17,7 +17,6 @@
 ## Rover & Apollo Studio
 
 - [Slides](https://slides.com/moonhighway/apollo-tooling/)
-- [Snowtooth Monolith Project](https://github.com/eveporcello/graphql-at-scale/tree/main/02-snowtooth-monolith)
 - [Cheatsheet](https://github.com/MoonHighway/production-ready-graphql/blob/main/resources/Monolith/RoverCheatsheet-Monolith.md)
 
 ## Apollo Federation
@@ -25,15 +24,8 @@
 - [Slides](https://slides.com/moonhighway/federation/#/6)
 - [Federation Docs](https://www.apollographql.com/docs/federation/quickstart/setup/)
 
-## Managed Federation
-
-- [Snowtooth Supergraph Project](https://github.com/MoonHighway/production-ready-graphql/tree/main/04-snowtooth-supergraph)
-- [Lab: Federated Pets](https://github.com/MoonHighway/production-ready-graphql/tree/main/05-san-diego-federated-api)
-
 ## Security
 
-- [Snowtooth Security Project - Start](https://github.com/MoonHighway/production-ready-graphql/tree/main/06-snowtooth-security/start)
-- [Snowtooth Security Project - Finished](https://github.com/MoonHighway/production-ready-graphql/tree/main/06-snowtooth-security/finished)
 - [Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html)
 - [Securing a Federated Graph](https://www.apollographql.com/docs/enterprise-guide/graph-security/)
 - [Protected Variants](https://www.apollographql.com/docs/studio/org/graphs/#protected-variants-enterprise-only)
