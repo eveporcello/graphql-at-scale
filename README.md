@@ -15,7 +15,7 @@
 - [Slides](https://slides.com/moonhighway/unions-interfaces/)
 - [Funded Pet Library](https://funded-pet-library.moonhighway.com)
 - [Pagination](https://relay.dev/graphql/connections.htm)
-- [Wayfair Implementing Relay Spec](https://www.apollographql.com/events/virtual-event/graphql-summit-october-2022/thank-you/building-relay-spec-compliance-in-federation/)
+- [Wayfair Implementing Relay Spec Talk](https://www.apollographql.com/events/virtual-event/graphql-summit-october-2022/thank-you/building-relay-spec-compliance-in-federation/)
 
 ## Apollo Client
 
