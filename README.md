@@ -10,6 +10,11 @@
 - **Eve Porcello**: [Twitter](https://twitter.com/eveporcello) | [Email](mailto:eve@moonhighway.com)
 - **Moon Highway Training**: [Moon Highway Website](https://www.moonhighway.com) | [Mailing List](http://bit.ly/moonhighway) | [Articles](https://www.moonhighway.com/articles)
 
+## Unions and Interfaces
+
+- [Slides](https://slides.com/moonhighway/unions-interfaces/)
+- [Funded Pet Library](https://funded-pet-library.moonhighway.com)
+
 ## Apollo Client
 
 - [Apollo Client Docs](https://www.apollographql.com/docs/react/)
